@@ -1,3 +1,8 @@
+// Jacob Opdahl & Savannah Farm
+// Lab 3
+
+// This Module is currently not used.
+
 angular.module('todoApp', [])
     .controller('TodoController', ['$scope', function($scope) {
         $scope.todos = [

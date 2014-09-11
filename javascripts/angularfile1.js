@@ -1,9 +1,16 @@
+// Jacob Opdahl & Savannah Farm
+// Lab 3
 angular.module('cougarApp', [])
+
+    /*
+     * This consists of code mildly modified from one of the tutorials done
+     * for Angular. This is for the second column.
+     */
     .controller('CougarController', ['$scope', function($scope){
 
         $scope.cougarItems = [
-            {text:'learn angular', done:true},
-            {text:'build an angular app', done:false}];
+            {text:'Fit In!', done:false},
+            {text:'Stand Out!', done:true}];
 
         $scope.addCougar = function() {
             $scope.cougarItems.push({text:$scope.todoText, done:false});
@@ -28,10 +35,14 @@ angular.module('cougarApp', [])
 
     }])
 
+    /*
+     * This is the code straight from the tutorial done for Angular.
+     * It is used for the first column with the To-do list.
+     */
     .controller('TodoController', ['$scope', function($scope) {
         $scope.todos = [
-            {text:'learn angular', done:true},
-            {text:'build an angular app', done:false}];
+            {text:'learn angular', done:false},
+            {text:'build an angular app', done:true}];
 
         $scope.addTodo = function() {
             $scope.todos.push({text:$scope.todoText, done:false});
