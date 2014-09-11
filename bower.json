@@ -1,0 +1,20 @@
+{
+  "name": "practiceWithAngular",
+  "version": "0.0.0",
+  "homepage": "https://github.com/emmasax1/practiceWithAngular",
+  "authors": [
+    "joethe <thele116@morris.umn.edu>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.11.0",
+    "bootstrap": "~3.2.0"
+  }
+}
