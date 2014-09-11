@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="cougarApp">
 <head lang="en">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
-    <script type="text/javascript" src="../node_modules/angular/lib/angular.min.js" ></script>
+    <!--<script type="text/javascript" src="../node_modules/angular/lib/angular.min.js" ></script>-->
     <script src="angularfile1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.1/angular.min.js"></script>
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
     <h1>Super Class Super Angular Super Fun!</h1>
-    <div class="listContainer" ng-controller="listController">
+    <div class="listContainer" ng-controller="CougarController">
         <div class="row">
             <div class="col-md-6 padded">
                 <div class="morris">
                     <h1>WordLists</h1>
                     <hr/>
                     <ul class="unstyled">
-                        <li ng-repeat="item in ourList">
-                            <span>{{item.text}}</span>
+                        <li ng-repeat="todo in cougarItems">
+                            <span>{{todo.text}}</span>
                         </li>
                     </ul>
 
                     <hr/>
-                    <form ng-submit="addWordList()">
-                        <input type="text" ng-model="wordListTitle" size="40" placeholder="add new wordlist title!">
+                    <form ng-submit="addCougar()">
+                        <input type="text" ng-model="todoText" size="40" placeholder="add new todo title!">
                         <input class="btn-primary" type="submit" value="add">
                     </form>
                 </div>
