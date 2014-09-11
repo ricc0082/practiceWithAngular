@@ -24,4 +24,4 @@ angular.module('todoApp', [])
                 if (!todo.done) $scope.todos.push(todo);
             });
         };
-    }])
+    }]);

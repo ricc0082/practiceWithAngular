@@ -1,5 +1,5 @@
 angular.module('cougarApp', [])
-    .controller('CougarController', ['Scope', function($scope){
+    .controller('CougarController', ['$scope', function($scope){
 
         $scope.cougarItems = [
             {text:'learn angular', done:true},
@@ -26,4 +26,4 @@ angular.module('cougarApp', [])
             });
         };
 
-    }])
+    }]);
