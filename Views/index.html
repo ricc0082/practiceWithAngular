@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script type="text/javascript" src="../node_modules/angular/lib/angular.min.js" ></script>
+    <script src="angularfile1.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Super Class Super Angular Super Fun!</h1>
+    <div class="listContainer" ng-controller="listController">
+        <div class="row">
+            <div class="col-md-6 padded">
+                <div class="morris">
+                    <h1>WordLists</h1>
+                    <hr/>
+                    <ul class="unstyled">
+                        <li ng-repeat="item in ourList">
+                            <span>{{item.text}}</span>
+                        </li>
+                    </ul>
+
+                    <hr/>
+                    <form ng-submit="addWordList()">
+                        <input type="text" ng-model="wordListTitle" size="40" placeholder="add new wordlist title!">
+                        <input class="btn-primary" type="submit" value="add">
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-md-6 padded">
+                <div class="morris">
+                    <h1>Words</h1>
+                    <hr/>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
