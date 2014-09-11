@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html>
+
 <head lang="en">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
@@ -8,17 +10,19 @@
     <script src="../javascripts/angularfile1.js"></script>
     <script src="../javascripts/todo.js"></script>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Angular Practice</title>
 </head>
 
 <body>
+
     <h1>Super Class Super Angular Super Fun!</h1>
 
-    <div class="listContainer" >
+    <div class="container-fluid" >
         <div class="row">
+
             <div class="col-md-6" ng-app="cougarApp" ng-controller="CougarController">
                 <div class="morris">
-                    <h1>WordLists</h1>
+                    <h2>WordLists</h2>
                     <hr/>
                     <ul class="unstyled">
                         <li ng-repeat="todo in cougarItems">
@@ -32,12 +36,13 @@
                         <input class="btn-primary" type="submit" value="add">
                     </form>
                 </div>
-
             </div>
-            <div class="col-md-6 padded" ng-app="todoApp">
+
+            <div class="col-md-6" ng-app="todoApp" ng-controller="TodoController">
                 <div class="morris">
                     <h2>Todo</h2>
-                    <div ng-controller="TodoController">
+                    <hr/>
+                    <div>
                         <span>{{remaining()}} of {{todos.length}} remaining</span>
                         [ <a href="" ng-click="archive()">archive</a> ]
                         <ul class="unstyled">
@@ -46,6 +51,8 @@
                                 <span class="done-{{todo.done}}">{{todo.text}}</span>
                             </li>
                         </ul>
+
+                        <hr/>
                         <form ng-submit="addTodo()">
                             <input type="text" ng-model="todoText"  size="30"
                                    placeholder="add new todo here">
@@ -53,9 +60,11 @@
                         </form>
                     </div>
                 </div>
-
             </div>
+
         </div>
     </div>
+
 </body>
+
 </html>
