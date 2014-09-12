@@ -18,20 +18,27 @@
 
 <body>
 
-    <h1>Super Class Super Angular Super Fun!</h1>
+    <div ng-controller="DatepickerDemoCtrl"></div>
+        <header>
+
+            <h1>Super Class Super Angular Super Fun!</h1>
+
+        </header>
+    </div>
 
     <div class="container-fluid" >
         <div class="row">
 
             <div class="col-md-6" ng-controller="TodoController">
                 <div class="morris">
+
                     <h2>To-do</h2>
 
                     <hr/>
                     <span>{{remaining()}} of {{todos.length}} remaining</span>
                     [ <a href="" ng-click="archive()">archive</a> ]
 
-                    <ul class="unstyled">
+                    <ul class="unstyled" id="noBullet">
                         <li ng-repeat="todo in todos">
                             <input type="checkbox" ng-model="todo.done">
                             <span class="done-{{todo.done}}">{{todo.text}}</span>
@@ -44,11 +51,13 @@
                                placeholder="add new todo here">
                         <input class="btn-primary" type="submit" value="add">
                     </form>
+
                 </div>
             </div>
 
             <div class="col-md-6" ng-controller="CougarController">
                 <div class="morris">
+
                     <h2>Go Cougs!!!</h2>
 
                     <hr/>
@@ -67,6 +76,7 @@
                                 <input class="btn-primary" type="submit" value="Add">
                             </form>
                         </div>
+
                         <div class="col-md-6">
                             <form ng-submit="removeCougar()">
                                 <input type="number" ng-model="index" size="25" placeholder="Choose which phrase to remove.">
@@ -74,15 +84,14 @@
                             </form>
                         </div>
                     </div>
+
                 </div>
             </div>
 
 
 
-
-
-
         </div>
+
     </div>
 
 </body>

@@ -17,6 +17,10 @@
     color: grey;
 }
 
+#noBullet {
+    list-style-type: none;
+}
+
 body {
     background-color: navajowhite;
 }
