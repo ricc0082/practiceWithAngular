@@ -1,3 +1,8 @@
+/*
+// Jacob Opdahl & Savannah Farm
+// Lab 3
+*/
+
 .padded {
     padding: 5px;
 }
@@ -7,6 +12,20 @@
     background-color: gold;
 }
 
+.done-true {
+    text-decoration: line-through;
+    color: grey;
+}
+
 body {
-    background-color: #f5f5f5;
+    background-color: navajowhite;
+}
+
+h1 {
+    background-color: gold;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
 }

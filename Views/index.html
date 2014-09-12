@@ -52,19 +52,33 @@
                     <h2>Go Cougs!!!</h2>
 
                     <hr/>
-                    <ul class="unstyled">
+                    <ol class="unstyled">
                         <li ng-repeat="todo in cougarItems">
                             <span>{{todo.text}}</span>
                         </li>
-                    </ul>
+                    </ol>
 
                     <hr/>
-                    <form ng-submit="addCougar()">
-                        <input type="text" ng-model="todoText" size="40" placeholder="add new todo title!">
-                        <input class="btn-primary" type="submit" value="add">
-                    </form>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form ng-submit="addCougar()">
+                                <input type="text" ng-model="todoText" size="40" placeholder="Add a new Cougar Favorite Phrase!">
+                                <input class="btn-primary" type="submit" value="Add">
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <form ng-submit="removeCougar()">
+                                <input type="number" ng-model="index" size="25" placeholder="Choose which phrase to remove.">
+                                <input class="btn-primary" type="submit" value="Delete">
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
+
 
 
 

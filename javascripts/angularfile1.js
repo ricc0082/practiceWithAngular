@@ -1,5 +1,6 @@
 // Jacob Opdahl & Savannah Farm
 // Lab 3
+
 angular.module('cougarApp', [])
 
     /*
@@ -15,6 +16,11 @@ angular.module('cougarApp', [])
         $scope.addCougar = function() {
             $scope.cougarItems.push({text:$scope.todoText, done:false});
             $scope.todoText = '';
+        };
+
+        $scope.removeCougar = function() {
+            $scope.cougarItems.splice($scope.index - 1, 1);
+            $scope.index = '';
         };
 
         $scope.remaining = function() {
