@@ -18,6 +18,9 @@ angular.module('cougarApp', [])
             $scope.todoText = '';
         };
 
+        /*
+         * Added a remove button so we could take items off the list as well.
+         */
         $scope.removeCougar = function() {
             $scope.cougarItems.splice($scope.index - 1, 1);
             $scope.index = '';
