@@ -1,7 +1,7 @@
 // Jacob Opdahl & Savannah Farm
 // Lab 3
 
-angular.module('cougarApp', [])
+angular.module('cougarApp', ['ui.bootstrap'])
 
     /*
      * This consists of code mildly modified from one of the tutorials done
@@ -13,17 +13,36 @@ angular.module('cougarApp', [])
             {text:'Fit In!', done:false},
             {text:'Stand Out!', done:true}];
 
+        $scope.alerts = [
+            { type: 'danger', msg: 'Alerts appear here if you try to delete without a number!'}
+        ];
+
         $scope.addCougar = function() {
-            $scope.cougarItems.push({text:$scope.todoText, done:false});
+
+            $scope.cougarItems.push({text: $scope.todoText, done: false});
             $scope.todoText = '';
+
         };
 
         /*
          * Added a remove button so we could take items off the list as well.
          */
         $scope.removeCougar = function() {
-            $scope.cougarItems.splice($scope.index - 1, 1);
+            if ($scope.index <= $scope.cougarItems.length && $scope.index > 0) {
+                $scope.cougarItems.splice($scope.index - 1, 1);
+            } else {
+                if ($scope.alerts.length < 5) {
+                    $scope.alerts.push({type: 'danger', msg: 'Must enter a valid number index.'});
+                }
+            }
             $scope.index = '';
+        };
+
+        /*
+         * Used to remove alerts on the page.
+         */
+        $scope.closeAlert = function(index) {
+            $scope.alerts.splice(index, 1);
         };
 
         $scope.remaining = function() {

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../style.css">
     <script type="text/javascript" src="../bower_components/angular/angular.min.js" ></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.1/angular.min.js"></script> -->
+    <script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="../javascripts/angularfile1.js"></script>
     <script src="../javascripts/todo.js"></script>
     <meta charset="UTF-8">
@@ -39,6 +40,7 @@
                     <span>{{remaining()}} of {{todos.length}} remaining</span>
                     [ <a href="" ng-click="archive()">archive</a> ]
 
+                    <!-- Uses Two-way data binding to take every object in todos and put it in a list item. -->
                     <ul class="unstyled" id="noBullet">
                         <li ng-repeat="todo in todos">
                             <input type="checkbox" ng-model="todo.done">
@@ -69,8 +71,13 @@
                         </li>
                     </ol>
 
+                    <!-- This gives alert when they try to delete Cougar Items without valid numbers. -->
                     <hr/>
+                    <div>
+                        <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+                    </div>
 
+                    <hr/>
                     <div class="row">
 
                         <div class="col-md-6">
