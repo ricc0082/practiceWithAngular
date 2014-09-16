@@ -26,7 +26,6 @@ angular.module('cougarApp', ['ui.bootstrap'])
             });
         };
     }])
-
     .controller('TodoController', ['$scope', function($scope) {
         $scope.todos = [
             {text:'learn angular', done:true},
@@ -52,4 +51,19 @@ angular.module('cougarApp', ['ui.bootstrap'])
                 if (!todo.done) $scope.todos.push(todo);
             });
         };
-    }]);
+    }])
+var ButtonsCtrl = function ($scope) {
+
+    $scope.singleModel = 1;
+
+    $scope.radioModel = 'Middle';
+
+    $scope.checkModel = {
+        left: false,
+        middle: true,
+        right: false
+    }
+}
+function CollapseDemoCtrl($scope) {
+    $scope.isCollapsed = false;
+};

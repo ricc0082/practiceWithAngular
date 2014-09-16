@@ -3,8 +3,13 @@
 }
 
 .morris {
-    color: maroon;
-    background-color: gold;
+    /*color: maroon;*/
+    /*background-color: gold;*/
+    list-style: none;
+}
+.done-true{
+    text-decoration: line-through;
+    color: grey;
 }
 
 body {

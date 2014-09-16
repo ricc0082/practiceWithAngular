@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
     <script type="text/javascript" src="../bower_components/angular/angular.min.js" ></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.1/angular.min.js"></script> -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.1/angular.min.js"></script>-->
+    <script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="../javascripts/angularfile1.js"></script>
     <script src="../javascripts/todo.js"></script>
     <meta charset="UTF-8">
@@ -14,10 +15,14 @@
 <body>
     <h1>Super Class Super Angular Super Fun!</h1>
 
-    <div class="listContainer" >
+    <div class="listContainer" ng-app="cougarApp">
         <div class="row">
-            <div class="col-md-6" ng-app="cougarApp" ng-controller="CougarController">
+            <div class="col-md-6" ng-controller="CougarController">
                 <div class="morris">
+                    <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
+                    <hr>
+                    <div collapse="isCollapsed">
+                        <div class="well well-lg">
                     <h1>WordLists</h1>
                     <hr/>
                     <ul class="unstyled">
@@ -32,9 +37,16 @@
                         <input class="btn-primary" type="submit" value="add">
                     </form>
                 </div>
-
+                </div>
             </div>
-            <div class="col-md-6 padded" ng-app="todoApp">
+                <!--Single toggle button from bootstrap-->
+            <h4>Single toggle</h4>
+            <pre>{{singleModel}}</pre>
+            <button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+                Single Toggle
+            </button>
+
+            <div class="col-md-6 padded">
                 <div class="morris">
                     <h2>Todo</h2>
                     <div ng-controller="TodoController">
@@ -53,9 +65,10 @@
                         </form>
                     </div>
                 </div>
-
-            </div>
-        </div>
-    </div>
+            </div>	<button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
+	<hr>
+	</div>
+  </div>
+</div>
 </body>
 </html>
