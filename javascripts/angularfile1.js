@@ -1,3 +1,7 @@
+//Pulled from bootstrap: function for the toggle collapse feature
+function CollapseDemoCtrl($scope) {
+    $scope.isCollapsed = false;
+}
 angular.module('cougarApp', ['ui.bootstrap'])
     .controller('CougarController', ['$scope', function($scope) {
         $scope.cougarItems = [
@@ -51,19 +55,17 @@ angular.module('cougarApp', ['ui.bootstrap'])
                 if (!todo.done) $scope.todos.push(todo);
             });
         };
-    }])
-var ButtonsCtrl = function ($scope) {
+    }]);
+    //Pulled from bootstrap: Single toggle button
+    var ButtonsCtrl = function ($scope) {
 
-    $scope.singleModel = 1;
+        $scope.singleModel = 1;
 
-    $scope.radioModel = 'Middle';
+        $scope.radioModel = 'Middle';
 
-    $scope.checkModel = {
-        left: false,
-        middle: true,
-        right: false
-    }
-}
-function CollapseDemoCtrl($scope) {
-    $scope.isCollapsed = false;
-};
+        $scope.checkModel = {
+            left: false,
+            middle: true,
+            right: false
+        }
+    };

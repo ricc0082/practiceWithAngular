@@ -14,7 +14,6 @@
 
 <body>
     <h1>Super Class Super Angular Super Fun!</h1>
-
     <div class="listContainer" ng-app="cougarApp">
         <div class="row">
             <div class="col-md-6" ng-controller="CougarController">
@@ -39,13 +38,6 @@
                 </div>
                 </div>
             </div>
-                <!--Single toggle button from bootstrap-->
-            <h4>Single toggle</h4>
-            <pre>{{singleModel}}</pre>
-            <button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
-                Single Toggle
-            </button>
-
             <div class="col-md-6 padded">
                 <div class="morris">
                     <h2>Todo</h2>
@@ -65,8 +57,13 @@
                         </form>
                     </div>
                 </div>
-            </div>	<button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
-	<hr>
+            </div>
+                <!--Single toggle button from bootstrap-->
+                <h4>Toggle button</h4>
+                <pre>{{singleModel}}</pre>
+                <button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+                    0 1 Toggle
+                </button>
 	</div>
   </div>
 </div>
